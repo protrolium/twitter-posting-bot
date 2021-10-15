@@ -76,8 +76,17 @@ function tweetRandomStatus() {
     } );
 }
 
+let methods = [
+    tweetRandomImage,
+    tweetRandomStatus
+]
 
-setInterval( function() {
-    tweetRandomImage();
-    //tweetRandomStatus();
-}, 60000 );
+function sbBot( methods, i = 0 ) {
+    setTimeout( function() {
+        console.log( methods[ i ] );
+        methods[i]();
+        sbBot(methods, ( i + 1 ) % methods.length);
+    }, 3000 )
+}
+
+sbBot(methods);
