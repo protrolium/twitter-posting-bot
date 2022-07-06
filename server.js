@@ -68,7 +68,7 @@ function tweetRandomImage() {
 }
 
 function tweetRandomStatus() {
-    const status = randomFromArray ( statuses );
+    const status = randomFromArray(statuses);
     console.log( status );
     
     T.post( 'statuses/update', status, function( err, data, response ) {
@@ -86,7 +86,7 @@ function sbBot( methods, i = 0 ) {
         console.log( methods[ i ] );
         methods[i]();
         sbBot(methods, ( i + 1 ) % methods.length);
-    }, 3000 )
+    }, 480000 ) // 21600000 every 6 hours
 }
 
 sbBot(methods);

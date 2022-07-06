@@ -1,6 +1,7 @@
 .gitignore
 node_modules/
 config.js
+config-spiritbomb_ai.js
 package-lock.json
 package.json
 images.js
