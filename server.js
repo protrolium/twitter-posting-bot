@@ -86,7 +86,7 @@ function sbBot( methods, i = 0 ) {
         console.log( methods[ i ] );
         methods[i]();
         sbBot(methods, ( i + 1 ) % methods.length);
-    }, 480000 ) // 21600000 every 6 hours
+    }, 3000000 ) // 3000000 50 min // 21600000 6 hours
 }
 
 sbBot(methods);
